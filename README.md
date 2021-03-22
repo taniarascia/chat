@@ -2,6 +2,8 @@
 
 A chat application using React, Redux Toolkit, Socket.io, and Tailwind CSS.
 
+![](screenshots/login.png)
+
 ![](screenshots/app.png)
 
 ## Setup
@@ -48,7 +50,7 @@ Run `npm run build` on `client` and `server` to compile to JavaScript.
 ## Todos
 
 - [ ] Duplicate users should be checked and not allowed
-- [ ] Add user is typing 
+- [ ] Add user is typing
 - [ ] Allow tagging
 - [ ] Add settings
 - [ ] Add error handling
