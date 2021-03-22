@@ -2,6 +2,8 @@
 
 A chat application using React, Redux Toolkit, Socket.io, and Tailwind CSS.
 
+![](screenshots/app.png)
+
 ## Setup
 
 ### Install dependencies
