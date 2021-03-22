@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Top nav bar */
+.nav {
+  height: 80px;
+}
+
+/* The rest of the content */
+.content {
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+}
+
+/* Scrollable chat area */
+.chatarea {
+  height: calc(100vh - 80px);
+  max-height: calc(100vh - 80px);
+}
