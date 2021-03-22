@@ -2,13 +2,13 @@ import React, { useMemo, useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import dayjs from 'dayjs'
 
-import { Nav } from '../components/Nav'
-import { Sidebar } from '../components/Sidebar'
-import { ChatArea } from '../components/ChatArea'
-import { sendMessage, getMessages } from '../store/messages.slice'
-import { logout } from '../store/auth.slice'
-import { getUsers } from '../store/users.slice'
-import { RootState, Message } from '../utilities/types'
+import { Nav } from 'components/Nav'
+import { Sidebar } from 'components/Sidebar'
+import { ChatArea } from 'components/ChatArea'
+import { sendMessage, getMessages } from 'store/messages.slice'
+import { logout } from 'store/auth.slice'
+import { getUsers } from 'store/users.slice'
+import { RootState, Message } from 'utilities/types'
 
 export const Chat: React.FC = () => {
   const dispatch = useDispatch()

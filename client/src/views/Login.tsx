@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import logo from '../assets/doge.png'
-import { validateEmail, validateTextField } from '../utilities/validation'
-import { TextField } from '../components/TextField'
-import { login } from '../store/auth.slice'
+import logo from 'assets/doge.png'
+import { validateEmail, validateTextField } from 'utilities/validation'
+import { TextField } from 'components/TextField'
+import { login } from 'store/auth.slice'
 
 export interface FormFields {
   email: string

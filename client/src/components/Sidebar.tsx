@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { User } from '../utilities/types'
+import { User } from 'utilities/types'
 
 export interface Props {
   currentUser: User | null

@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/doge.png'
+import logo from 'assets/doge.png'
 
 export interface Props {
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void

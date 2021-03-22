@@ -1,8 +1,8 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 
 import { rootReducer } from './rootReducer'
-import socketMiddleware from '../middleware/socketMiddleware'
-import SocketClient from '../api/SocketClient'
+import socketMiddleware from 'middleware/socketMiddleware'
+import SocketClient from 'api/SocketClient'
 
 const socket = new SocketClient()
 

@@ -6,8 +6,8 @@ import { createBrowserHistory } from 'history'
 
 import './index.css'
 
-import { store } from './store'
-import { App } from './App'
+import { store } from 'store'
+import { App } from 'App'
 
 const history = createBrowserHistory()
 

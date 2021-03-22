@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { Switch, Redirect } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
-import { PrivateRoute } from './routing/PrivateRoute'
-import { PublicRoute } from './routing/PublicRoute'
-import { Login } from './views/Login'
-import { Chat } from './views/Chat'
-import { login } from './store/auth.slice'
+import { PrivateRoute } from 'routing/PrivateRoute'
+import { PublicRoute } from 'routing/PublicRoute'
+import { Login } from 'views/Login'
+import { Chat } from 'views/Chat'
+import { login } from 'store/auth.slice'
 
 export const App = () => {
   const dispatch = useDispatch()

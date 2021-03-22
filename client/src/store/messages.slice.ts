@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { createSlice, PayloadAction, Dispatch } from '@reduxjs/toolkit'
 
-import { Message, MessagesState } from '../utilities/types'
+import { Message, MessagesState } from 'utilities/types'
 
 const initialState: MessagesState = {
   messages: [],

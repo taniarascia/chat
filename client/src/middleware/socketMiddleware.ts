@@ -1,8 +1,8 @@
 import { Dispatch } from 'redux'
 
-import { addMessage } from '../store/messages.slice'
-import { addUser, setOnlineUsersByUsername } from '../store/users.slice'
-import { Message, User, RootState } from '../utilities/types'
+import { addMessage } from 'store/messages.slice'
+import { addUser, setOnlineUsersByUsername } from 'store/users.slice'
+import { Message, User, RootState } from 'utilities/types'
 
 interface SocketMiddlewareParams {
   dispatch: Dispatch

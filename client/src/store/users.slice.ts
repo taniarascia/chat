@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { createSlice, PayloadAction, Dispatch } from '@reduxjs/toolkit'
-import { User, UsersState } from '../utilities/types'
+import { User, UsersState } from 'utilities/types'
 
 const initialState: UsersState = {
   users: [],

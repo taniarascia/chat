@@ -1,7 +1,7 @@
 import React from 'react'
 import dayjs from 'dayjs'
 
-import { Message } from '../utilities/types'
+import { Message } from 'utilities/types'
 
 export interface Props {
   messages: Message[]
