@@ -1,6 +1,6 @@
 {
   "name": "chat-server",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
@@ -20,7 +20,6 @@
     "start": "nodemon ./src/server.ts",
     "build": "tsc --project ./"
   },
-  "keywords": [],
   "author": "Tania Rascia",
   "license": "MIT"
 }
