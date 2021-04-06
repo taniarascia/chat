@@ -1,0 +1,29 @@
+version: "3.6"
+
+services:
+
+  server:
+    image: node:15
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/code
+    working_dir: /code/server
+    command: bash -c "npm install && npm start"
+    networks:
+      - app-network
+
+  client:
+    image: node:15
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/code
+    working_dir: /code/client
+    command: bash -c "npm install && npm start"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
