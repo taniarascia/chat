@@ -1,13 +1,17 @@
 import React from 'react'
 
+
 import { User } from '../utilities/types'
 
 export interface Props {
   currentUser: User | null
-  users: User[]
+  users: User[],
+  typingUsers: string[]
 }
 
-export const Sidebar: React.FC<Props> = ({ users, currentUser }) => {
+
+export const Sidebar: React.FC<Props> = ({ users, currentUser, typingUsers }) => {
+
   return (
     <div className="flex-none min-w-300 bg-blue overflow-y-auto">
       <div>
@@ -26,6 +30,9 @@ export const Sidebar: React.FC<Props> = ({ users, currentUser }) => {
               <span>{user.username}</span>
               {user.username === currentUser!.username && (
                 <span className="ml-1 text-white text-opacity-30">(you)</span>
+              )}
+              {typingUsers.find(username => user.username === username) && (
+                <span className="ml-1 text-white text-opacity-50 italic"> typing...</span>
               )}
             </div>
           </div>

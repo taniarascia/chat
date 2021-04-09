@@ -7,6 +7,7 @@ const initialState: UsersState = {
   onlineUsersByUsername: [],
   loading: false,
   error: null,
+  typingUsers: []
 }
 
 const usersSlice = createSlice({
@@ -28,6 +29,19 @@ const usersSlice = createSlice({
     setLoadingComplete: (state) => {
       state.loading = false
     },
+    setTypingUser: (state,{payload}) => {
+      
+      state.typingUsers = [payload,...[...state.typingUsers].filter(username => username !== payload)]
+    },
+    removeTypingUser: (state, { payload }) => {
+      state.typingUsers = state.typingUsers.filter(username => username !== payload)
+    },
+    sendThisUserIsTyping: (state, { payload }: PayloadAction<any>) => {
+    
+    },
+    sendThisUserStoppedTyping: (state, { payload }: PayloadAction<any>) => {
+
+    },
   },
 })
 
@@ -37,6 +51,10 @@ export const {
   setOnlineUsersByUsername,
   setLoading,
   setLoadingComplete,
+  setTypingUser,
+  removeTypingUser,
+  sendThisUserIsTyping,
+  sendThisUserStoppedTyping
 } = usersSlice.actions
 export default usersSlice.reducer
 

@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux'
 
 import { addMessage } from '../store/messages.slice'
-import { addUser, setOnlineUsersByUsername } from '../store/users.slice'
+import { addUser, removeTypingUser, setOnlineUsersByUsername, setTypingUser } from '../store/users.slice'
 import { Message, User, RootState } from '../utilities/types'
 
 interface SocketMiddlewareParams {
@@ -32,6 +32,16 @@ export default function socketMiddleware(socket: any) {
           dispatch(addMessage(message))
         })
 
+        // Remove if some user stops typing
+        socket.on('user stopped typing...', (username: string)=>{
+          dispatch(removeTypingUser(username));
+        })
+
+        // Add if some user starts typing
+        socket.on('user starts typing...', (username: string) => {
+          dispatch(setTypingUser(username));
+        })
+
         // Append a user every time a new one is registered
         socket.on('new user added', (user: User) => {
           dispatch(addUser(user))
@@ -42,6 +52,21 @@ export default function socketMiddleware(socket: any) {
 
         break
       }
+
+      // Telling the sever that this user is typing...
+      case 'users/sendThisUserIsTyping': {
+        socket.emit('typing...', payload)
+
+        break
+      }
+
+      // Telling the server that this user stopped typing..
+      case 'users/sendThisUserStoppedTyping': {
+        socket.emit('stopped typing...', payload)
+
+        return
+      }
+
       // Disconnect from the socket when a user logs out
       case 'users/logout': {
         socket.disconnect()
