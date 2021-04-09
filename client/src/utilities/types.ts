@@ -12,7 +12,8 @@ export interface UsersState {
   users: User[]
   onlineUsersByUsername: string[]
   loading: boolean
-  error: string | null
+  error: string | null,
+  typingUsers: string[]
 }
 
 // =======================================================================================
