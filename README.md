@@ -50,7 +50,7 @@ Run `npm run build` on `client` and `server` to compile to JavaScript.
 ## Todos
 
 - [ ] Duplicate users should be checked and not allowed
-- [ ] Add user is typing
+- [x] Add user is typing
 - [ ] Allow tagging
 - [ ] Add settings
 - [ ] Add error handling
@@ -59,4 +59,4 @@ Run `npm run build` on `client` and `server` to compile to JavaScript.
   - [ ] React Testing Library component tests
   - [ ] Cypress end-to-end tests
 - [ ] Add ESLint
-- [ ] Add Docker support
+- [x] Add Docker support
